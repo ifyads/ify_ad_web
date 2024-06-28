@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <link rel="stylesheet" href="/static/redi.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/summa/logo.jpeg" >
+</head>
+<body>
+    <div class="container"> 
+
+     <h1 class="title">IFYADS</h1> 
+
+     
+     <p>Welcome to <a>Ifyads!</a> Here you can promote any legal things for free. This <a href="/Ads_offer">offer</a> ends in </p>     
+        
+     <div class="count">
+        <span class="number">00</span>
+        <span class="text">Days</span>
+        <span class="number">00</span>
+        <span class="text">Hours</span>
+        <span class="number">00</span>
+        <span class="text">Minutes</span>
+        <span class="number">00</span>
+        <span class="text">Seconds</span>
+      </div>
+      
+      <p> so don't miss out!</p>
+
+    <p>You will be redirected to {{ long }} in</p>
+
+
+
+    <div class="countdown">
+        <div id="seconds"></div>
+      </div>
+
+      <a href="{{ link }}">
+    <img src="{{ ad_image }}" class="ad_img">
+  </a>
+
+</div>
+
+
+<script>
+
+    const secondsElement = document.getElementById('seconds');
+    let remainingTime = 5; 
+    
+    function updateCountdown() {
+      if (remainingTime === 0) {
+        clearInterval(intervalId); 
+        secondsElement.textContent = "Finished!";
+        return;
+      }
+    
+      secondsElement.textContent = remainingTime;
+      remainingTime--;
+    }
+    
+    const intervalId = setInterval(updateCountdown, 1000); 
+    
+          </script>
+
+<script>
+    const countdownElements = document.querySelectorAll('.count .number');
+    let remainingSeconds = {{ remaining_seconds }}; 
+
+
+    function updateCountdown() {
+      remainingSeconds--; 
+
+      const days = Math.floor(remainingSeconds / (24 * 60 * 60));
+      const hours = Math.floor((remainingSeconds % (24 * 60 * 60)) / (60 * 60));
+      const minutes = Math.floor((remainingSeconds % (60 * 60)) / 60);
+      const seconds = remainingSeconds % 60;
+
+           
+    countdownElements[0].textContent = days.toString().padStart(2, '0');
+    countdownElements[1].textContent = hours.toString().padStart(2, '0');
+    countdownElements[2].textContent = minutes.toString().padStart(2, '0');
+    countdownElements[3].textContent = seconds.toString().padStart(2, '0');
+
+    
+    if (remainingSeconds <= 0) {
+     
+      console.log("Countdown finished!");
+    } else {
+      
+      setTimeout(updateCountdown, 1000);
+    }
+  }
+
+  
+  updateCountdown();
+
+  
+  setInterval(function() {
+    fetch('/get_remaining_time')
+      .then(response => response.json())
+      .then(data => {
+        remainingSeconds = data.remaining_seconds;
+        updateCountdown(); 
+      });
+  }, 60000); 
+</script>
+
+
+
+    <script>
+        const delay = '{{ delay }}'; 
+        const longUrl = '{{ long }}'; 
+
+        function redirectAfterDelay() {
+            setTimeout(() => {
+                window.location.href = longUrl;
+            }, delay * 1000); 
+        }
+
+        redirectAfterDelay(); 
+
+
+        const clockElement = document.getElementById('clock');
+
+
+
+
+    </script>
+
+</body>
+</html>
