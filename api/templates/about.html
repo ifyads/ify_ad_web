@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/about.css">
+
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    body {
+        background-color: #E6F4F8;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+  
+    main {
+        flex: 1;
+        width: 100%;
+        padding: 40px 0;
+        text-align: center;
+    }
+    
+    .about, .support {
+        margin-bottom: 40px;
+    }
+    
+    h1, h2 {
+        color: #272960;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+    
+    a {
+        color: #00BFFF;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    
+    @media (min-width: 768px) {
+        nav ul {
+            gap: 40px;
+        }
+        
+        main {
+            padding: 60px 0;
+        }
+    }
+    
+    </style>
+    <link rel="shortcut icon" type="image/x-icon" href="/static/summa/logo.jpeg" >
+</head>
+
+<body>
+ 
+    <main>
+        <div class="container">
+            <section class="about">
+                <h1>About Us</h1>
+                <p>Welcome to IfyAds! We offer free advertising solutions to help startups and creators thrive. Our new link shortener service is designed to support business to growth. By using IfyAds's link shortener, you can promote startups and creators business.</p>
+                <p>For more details on our free advertising offers, <a href="/Ads_offer">click here</a>.</p>
+                <p>In the future, you will have the opportunity to earn with URL shortening and placing ads, although these services will involve a cost.</p>
+                
+                <img src="/static/ad1.png" alt="Advertising Image"> 
+                
+            </section>
+            <section class="support">
+                <h2>Supporting New Businesses</h2>
+                <p>At IfyAds, we are dedicated to empowering new businesses. Our free advertising offers and link shortener service are tailored to help you reach a wider audience and grow your brand.</p>
+                <img src="/static/support.svg" alt="Business Support Image">
+            </section>
+        </div>
+    </main>
+
+
+</body>
+</html>

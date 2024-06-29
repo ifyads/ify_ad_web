@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IfyAds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/index.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/summa/logo.jpeg" >
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">IfyAds</div>
+            <nav>
+                <ul>
+
+                    <li><a href="/Ads_offer">Free Offer</a></li>
+
+                    <li><a href="/About_Us" class="get-started">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="title">
+                <h1>Welcome to IfyAds</h1>
+                <p>Empowering startups with advanced ads and intuitive link shortening</p>
+            </div>
+            <div class="shortener-box">
+                <form action="/linkshortener" method="post">
+                    <input type="text" name="long_url" placeholder="Paste a long URL" required>
+                    <button type="submit">Shorten</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
