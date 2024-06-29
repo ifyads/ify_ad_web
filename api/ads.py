@@ -13,7 +13,7 @@ import datetime
 
 import platform
 
-from admin import admin 
+#from admin import admin 
 
 from b3cd9LT import ClRa1
 
