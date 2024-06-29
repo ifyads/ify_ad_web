@@ -15,9 +15,9 @@ import platform
 
 #from admin import admin 
 
-from b3cd9LT import ClRa1
+#from b3cd9LT import ClRa1
 
-from yUTBrRaENu import r3KGwEgXI1
+#from yUTBrRaENu import r3KGwEgXI1
   
 #import validators  
 
@@ -286,7 +286,7 @@ def terms_and_conditions():
     if request.method == "GET":
         return render_template("terms.html") 
 
-
+"""
 @app.route("/6379/admin/login")
 def admin_login():
     return admin()
@@ -300,6 +300,8 @@ def zGkg62XtFY():
     name =request.form.get("piXDgcs")
     password = request.form.get("uRXfGLayOk")
     return r3KGwEgXI1(name , password)
+
+"""
 
 if __name__ == "__main__":
     app.run(debug=True,port=3000)
