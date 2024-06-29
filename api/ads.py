@@ -27,15 +27,15 @@ import os
 
 
 BASE_URL = "127.0.0.1:8000/"  
-SECRET_KEY = "your_secret_key"  
+SECRET_KEY = "kaiphu25"  
 
 
-REDIRECT_DELAY = 6000
+REDIRECT_DELAY = 6
 
-DB_HOST = "localhost"
-DB_USER = "itsmine"
+DB_HOST = "ifyads.mysql.pythonanywhere-services.com"
+DB_USER = "ifyads"
 DB_PASSWORD = "I8t9s2M5Y7d6A5t6A25@"
-DB_NAME = "link"
+DB_NAME = "ifyads$ifyads_link"
 
 app = Flask(__name__, template_folder='templates')  
 
@@ -302,4 +302,4 @@ def zGkg62XtFY():
     return r3KGwEgXI1(name , password)
 
 if __name__ == "__main__":
-    app.run(debug=True,port=8000)
+    app.run(debug=True,port=3000)
